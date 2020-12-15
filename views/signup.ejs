@@ -1,6 +1,7 @@
 <%- include('common/header') -%>
 <div class="grid">
-  <form action="https://httpbin.org/post" method="POST" class="form login">
+  <%- include('common/mess.ejs') -%>
+  <form action="/signup" method="POST" class="form login">
     <div class="form__field">
       <label for="login__username"
         ><svg class="icon">
@@ -32,7 +33,7 @@
       <input
         id="login__username"
         type="text"
-        name="username"
+        name="email"
         class="form__input"
         placeholder="Email"
         required
