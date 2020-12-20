@@ -2,7 +2,7 @@ const mongooes = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 
 let authSehema = mongooes.Schema({
-  username: String,
+  name: String,
   email: String,
   password: {
     type: String,
@@ -10,6 +10,6 @@ let authSehema = mongooes.Schema({
   },
 });
 
-authSehema.plugin(passportLocalMongoose);
+authSehema.plugin(passportLocalMongoose, { usernameField: "name" });
 
 module.exports = mongooes.model("User", authSehema);

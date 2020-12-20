@@ -1,21 +1,12 @@
 <%- include('common/header') -%>
 <div class="grid">
   <%- include('common/mess.ejs') -%>
-  <form action="/signup" method="POST" class="form login">
+  <form action="/login" method="POST" class="form login" enctype="multipart/form-data">
     <div class="form__field">
       <label for="login__username"
         ><svg class="icon">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg
         ><span class="hidden">Username</span></label
-      >
-      <input id="login__username" type="text" name="name" class="form__input" placeholder="Username" required />
-    </div>
-
-    <div class="form__field">
-      <label for="login__username"
-        ><svg class="icon">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg
-        ><span class="hidden">Email</span></label
       >
       <input id="login__username" type="email" name="email" class="form__input" placeholder="Email" required />
     </div>
@@ -30,12 +21,12 @@
     </div>
 
     <div class="form__field">
-      <input type="submit" value="Sign Up" />
+      <input type="submit" value="Sign In" />
     </div>
   </form>
 
   <p class="text--center">
-    Have a account? <a href="/">Login</a>
+    Not a member? <a href="signup">Sign up now</a>
     <svg class="icon">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use>
     </svg>

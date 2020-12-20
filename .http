@@ -1,8 +1,1 @@
 POST  http://localhost:8000/signup/
-
-{
-    username : "ali",
-    email : "a@a",
-    password : "wed"
-
-}
