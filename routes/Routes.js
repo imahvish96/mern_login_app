@@ -27,10 +27,10 @@ router.post("/signup", (req, res) => {
     if (err) {
       console.log(`ERROR ${err}`);
       req.flash("error_msg", "ERROR: " + err);
-      res.redirect("/signup");
+      res.redirect("signup");
     }
-
-    passport.authenticate("local")((req, res) => {
+    passport.authenticate("local")(req, res, () => {
+      console.log("Hello World");
       req.flash("success_msg", "Success Account Created Successfully");
       res.redirect("/login");
     });
